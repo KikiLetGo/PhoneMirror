@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>File Manager Template | PrepBootstrap</title>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This template demonstrates a file manager layout. It includes the Shield UI TreeView widget for folder selection, as well as navigation and preferences buttons." />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/light-glow/all.min.css" />
+
+    <link rel="stylesheet" href="css/github.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/Site.css" />
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+
+
+    
+        
+<div class="container pb-filemng-template">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <nav class="navbar navbar-default pb-filemng-navbar">
+                <div class="container-fluid">
+                    <!-- Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="pull-left navbar-toggle collapsed treeview-toggle-btn" data-toggle="collapse" data-target="#treeview-toggle" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#options" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="fa fa-gears"></span>
+                        </button>
+
+                        <!-- Search button -->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#pb-filemng-navigation" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="fa fa-share"></span>
+                        </button>
+                    </div>
+
+                    <ul class="collapse navbar-collapse nav navbar-nav navbar-right" id="options">
+                        <li><a href="#"><span class="fa fa-crosshairs fa-lg"></span></a></li>
+                        <li><a href="#"><span class="fa fa-ellipsis-v fa-lg"></span></a></li>
+                        <li><a href="#"><span class="fa fa-lg fa-server"></span></a></li>
+                        <li><a href="#"><span class="fa fa-lg fa-minus"></span></a></li>
+                        <li><a href="#"><span class="fa fa-lg fa-window-maximize"></span></a></li>
+                        <li><a href="#"><span class="fa fa-lg fa-times"></span></a></li>
+                    </ul>
+
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="pb-filemng-navigation">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><span class="fa fa-chevron-left fa-lg"></span></a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right fa-lg"></span></a></li>
+                            <li class="pb-filemng-active"><a href="#"><span class="fa fa-file fa-lg"></span></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <div class="panel panel-default">
+                <div class="panel-body pb-filemng-panel-body">
+                    <div class="row">
+                        <div class="col-sm-3 col-md-4 pb-filemng-template-treeview">
+                            <div class="collapse navbar-collapse" id="treeview-toggle">
+                                <div id="treeview">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 col-md-8 pb-filemng-template-body">
+                            <div class="col-xs-6 col-sm-6 col-md-3 pb-filemng-body-folders"><img class="img-responsive" src="folder.png"><br><p class="pb-filemng-paragraphs">boot</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .pb-filemng-template {
+        font-family: 'Sansita', sans-serif;
+    }
+
+    .pb-filemng-navbar {
+        margin-bottom: 0;
+    }
+
+    .treeview-toggle-btn {
+        margin-left: 15px;
+    }
+
+    .pb-filemng-template-btn {
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        outline:none;
+        color: gray;
+        padding: 0px 13px 0px 13px;
+    }
+
+    .pb-filemng-active {
+        border-bottom: 2px solid #6d97db;
+        color: #5f6977;
+    }
+
+    .pb-filemng-template-btn:hover {
+        color: blue;
+    }
+
+    .pb-filemng-body-folders > img:hover {
+        cursor: pointer;
+    }
+
+    .btn-align {
+        margin-top: 7px;
+    }
+
+    .pb-filemng-template-treeview {
+        border-right: 1px solid gray;
+    }
+
+    .pb-filemng-folder {
+        color: orange;
+        padding-bottom: 3px;
+    }
+
+    .pb-filemng-paragraphs {
+        margin-top: -20px;
+        text-align: center;
+    }
+
+    .img-responsive {
+        margin: 0 auto;
+    }
+
+@media screen and (max-width: 767px) {
+
+    .pb-filemng-template-treeview {
+        border-right: none;
+    }
+
+    #options {
+        text-align: center;
+    }
+
+    #options > li {
+        display: inline-block;
+    }
+
+    #pb-filemng-navigation > ul {
+        text-align: center;
+    }
+
+    #pb-filemng-navigation > ul > li {
+        display: inline-block;
+    }
+
+}
+</style>
+
+<!-- you need to include the shieldui css and js assets in order for the charts to work -->
+<link rel="stylesheet" type="text/css" href="css/light-bootstrap/all.min.css" />
+<script type="text/javascript" src="js/shieldui-all.min.js"></script>
+
+
+<script>
+    var dataSrc = [
+        {
+            "text": "Recent", 
+            "iconCls": "fa fa-history"
+        },
+        {
+            "text": "Home", 
+            "iconCls": "fa fa-home"
+        },
+        {
+            "text": "Documents",
+            "iconCls": "fa fa-file-text",
+            "items": [
+                {
+                    "text": "My Web Sites",
+                    "iconCls": "fa fa-folder"
+                }
+            ]
+        },
+        {
+            "text": "Pictures",
+            "iconCls": "fa fa-picture-o",
+            "items": [
+                {
+                    "text": "Camera Roll",
+                    "iconCls": "fa fa-folder"
+                },
+                {
+                    "text": "Saved Pictures",
+                    "iconCls": "fa fa-folder"
+                }
+            ]
+        },
+        {
+            "text": "Music",
+            "iconCls": "fa fa-music"
+        },
+        {
+            "text": "Downloads",
+            "iconCls": "fa fa-arrow-down"
+        },
+        {
+            "text": "Video",
+            "iconCls": "fa fa-film",
+            "items": [
+                {
+                    "text": "Captures",
+                    "iconCls": "fa fa-folder"
+                }
+            ]
+        },
+        {
+            "text": "Recycle bin",
+            "iconCls": "fa fa-trash-o"
+        },
+        {
+            "text": "RandomUser",
+            "iconCls": "fa fa-user",
+            "cls": "custom"
+        },
+        {
+            "text": "Torrents",
+            "iconCls": "fa fa-folder"
+        },
+        {
+            "text": "Lorem Ipsum",
+            "iconCls": "fa fa-folder"
+        }
+    ]
+    $(function () {
+        $("#treeview").shieldTreeView({
+            dataSource: dataSrc
+        });
+
+       
+
+    })
+</script>
+
+
+
+
+
+</body>
+</html>
